@@ -6,6 +6,7 @@ import Section from './Components/Section'
 import dummyText from './DummyText'
 import backgroundImage1 from './images/1.jpeg'
 import backgroundImage2 from './images/2.jpeg'
+import tetra from './images/tetra-animation-basic.gif'
 
 
 function App () {
@@ -13,18 +14,18 @@ function App () {
     <div className='App'>
       <Nav />
       <Section
-          title="Section 1"
-          subtitle={dummyText}
+          title=""
+          subtitle=''
           dark={true}
           id="section1"
           backImg={backgroundImage1}
         />
         <Section
-          title="Section 2"
-          subtitle={dummyText}
+          title=""
+          subtitle=''
           dark={false}
           id="section2"
-          backImg = { backgroundImage2 }
+          backImg = { tetra }
         />
         <Section
           title=""
@@ -37,6 +38,8 @@ function App () {
           subtitle={dummyText}
           dark={false}
           id="section4"
+          backImg = { backgroundImage2 }
+
         />
         <Section
           title="Section 5"

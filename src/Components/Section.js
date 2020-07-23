@@ -10,8 +10,9 @@ function Section ({ title, subtitle, dark, id, backImg }) {
 
   return (
     <div className={'section' + (dark ? ' section-dark' : '')}
+    id = { id }
     style={divStyle}>
-      <div className='section-content' id={id}>
+      <div className='section-content'>
         <h1>{title}</h1>
         <p>{subtitle}</p>
       </div>

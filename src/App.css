@@ -1,5 +1,6 @@
-body {
+body, * {
     margin: 0;
+    box-sizing: border-box;
 }
 
 /* --------- navgation --------- */
@@ -27,6 +28,22 @@ img {
 }
 
 /* --------- sections --------- */
+.section {
+    margin: 0;
+    border: none;
+}
+
+#section1, #section2 {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#section3 {
+    /* background: green; */
+}
+
 #section3 p {
     font-size: 5rem;
+    margin: 0;
 }
