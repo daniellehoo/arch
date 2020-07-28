@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-function Section ({ title, subtitle, dark, id, backImg }) {
+function Section ({ title, subtitle, dark, id, backImg, height }) {
     const divStyle = {
         color: 'grey',
         backgroundImage: `url(${backImg})`,
-        height: '50vh'
+        height: height
     }
 
   return (

@@ -11,44 +11,45 @@ import tetra from './images/tetra-animation-basic.gif'
 
 function App () {
   return (
-    <div className='App'>
+    <div className="App">
       <Nav />
       <Section
-          title=""
-          subtitle=''
-          dark={true}
-          id="section1"
-          backImg={backgroundImage1}
-        />
-        <Section
-          title=""
-          subtitle=''
-          dark={false}
-          id="section2"
-          backImg = { tetra }
-        />
-        <Section
-          title=""
-          subtitle="This is the future."
-          dark={true}
-          id="section3"
-        />
-        <Section
-          title="Section 4"
-          subtitle={dummyText}
-          dark={false}
-          id="section4"
-          backImg = { backgroundImage2 }
-
-        />
-        <Section
-          title="Section 5"
-          subtitle={dummyText}
-          dark={true}
-          id="section5"
-        />
+        title=""
+        subtitle=""
+        dark={true}
+        id="section1"
+        backImg={backgroundImage1}
+        height="100vh"
+      />
+      <Section
+        title=""
+        subtitle=""
+        dark={false}
+        id="section2"
+        backImg={tetra}
+        height="50vh"
+      />
+      <Section
+        title=""
+        subtitle="This is the future."
+        dark={true}
+        id="section3"
+      />
+      <Section
+        title="Section 4"
+        subtitle={dummyText}
+        dark={false}
+        id="section4"
+        backImg={backgroundImage2}
+      />
+      <Section
+        title="Section 5"
+        subtitle={dummyText}
+        dark={true}
+        id="section5"
+      />
     </div>
-  )
+  );
 }
 
 export default App
