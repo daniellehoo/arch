@@ -8,19 +8,19 @@ class Nav extends Component {
   }
   render () {
     return (
-      <nav className='nav' id='navbar'>
-        <div className='nav-content'>
+      <nav className="nav" id="navbar">
+        <div className="nav-content">
           <img
             src={logo}
-            className='nav-logo'
-            alt='Logo'
+            className="nav-logo"
+            alt="Logo"
             onClick={this.scrollToTop}
           />
-          <ul className='nav-items'>
-            <li className='nav-item'>
+          <ul className="nav-items">
+            <li className="nav-item">
               <Link
-                activeClass='active'
-                to='section1'
+                activeClass="active"
+                to="section1"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -29,10 +29,10 @@ class Nav extends Component {
                 Section 1
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                activeClass='active'
-                to='section2'
+                activeClass="active"
+                to="section2"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -41,10 +41,10 @@ class Nav extends Component {
                 Section 2
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                activeClass='active'
-                to='section3'
+                activeClass="active"
+                to="section3"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -53,10 +53,10 @@ class Nav extends Component {
                 Section 3
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                activeClass='active'
-                to='section4'
+                activeClass="active"
+                to="section4"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -65,10 +65,10 @@ class Nav extends Component {
                 Section 4
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                activeClass='active'
-                to='section5'
+                activeClass="active"
+                to="section5"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -77,10 +77,22 @@ class Nav extends Component {
                 Section 5
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="footer"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
-    )
+    );
   }
 }
 

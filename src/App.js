@@ -7,7 +7,7 @@ import dummyText from './DummyText'
 import backgroundImage1 from './images/1.jpeg'
 import backgroundImage2 from './images/2.jpeg'
 import tetra from './images/tetra-animation-basic.gif'
-
+import Footer from './Components/footer'
 
 function App () {
   return (
@@ -48,6 +48,8 @@ function App () {
         dark={true}
         id="section5"
       />
+      <Footer
+      id="footer" />
     </div>
   );
 }

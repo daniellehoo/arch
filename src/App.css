@@ -47,3 +47,24 @@ img {
     font-size: 5rem;
     margin: 0;
 }
+
+/* --------- footer --------- */
+
+.footer {
+    display: flex;
+    height: 100px;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: bisque;
+    margin-top: 1rem;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer li {
+    margin: 2rem;
+    list-style-type: none;
+}
