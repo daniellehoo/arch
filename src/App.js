@@ -8,12 +8,11 @@ import backgroundImage1 from './images/1.jpeg';
 import backgroundImage2 from './images/2.jpeg';
 import tetra from './images/tetra-animation-basic.gif';
 import Footer from './Components/footer';
-import MapboxGLMap from './Components/Mapbox';
 
 function App() {
   return (
     <div className="container">
-      <h1>blo.cks</h1>
+      <h1 className="swing">BLO.CKS</h1>
       <Nav />
       <Section
         title=""
@@ -37,17 +36,7 @@ function App() {
         dark={true}
         id="section3"
       />
-      <Section
-        title=""
-        subtitle=""
-        dark={false}
-        id="section4"
-        backImg={backgroundImage1}
-        height="50vh"
-      />
-      <div class="map">
-        <MapboxGLMap />
-      </div>
+      <Section title="" subtitle="" dark={false} id="section4" height="50vh" />
       <Footer />
     </div>
   );

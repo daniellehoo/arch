@@ -1,14 +1,29 @@
+@font-face {
+	font-family: 'xiImperfect';
+	src: url('//2ttf.com/webfont/KLYZ1IyB/webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'fontname';
+	src: url('//2ttf.com/webfont/Y4mTLBOG/webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Maragsâ-Display';
+    src: local('Maragsâ-Display'), url(./fonts/Maragsâ-Display.otf) format('opentype');
+}
+
 body, * {
     margin: 0;
     box-sizing: border-box;
 }
 
-/* .container {
-    padding-bottom: 25px;
-} */
-
 h1 {
+    font-family: 'Maragsâ-Display';
     position: fixed;
+    margin: 2rem;
+    font-size: 5rem;
+    cursor: pointer;
 }
 
 /* --------- navgation --------- */
@@ -17,6 +32,9 @@ h1 {
     position: fixed;
     top: 0;
     right: 0;
+    font-family: 'fontname';
+    font-weight: 800;
+
 }
 
 .nav-items {
@@ -79,4 +97,82 @@ img {
 
 .footer li {
     list-style-type: none;
+}
+
+
+/* --------- keyframes --------- */
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.swing:hover
+{
+        -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
 }

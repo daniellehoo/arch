@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
+import MapboxGLMap from './Mapbox';
+
 
 function footer() {
   return (
     <div className="footer">
+    <MapboxGLMap/>
       <ul>
-        <li>cowabunga</li>
-        <li> Eat my shorts </li>
-        <li>Contact us</li>
+        <li>copyright 2020</li>
+        <li> collaborate </li>
+        <li>contact us</li>
       </ul>
     </div>
   );

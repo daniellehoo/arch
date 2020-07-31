@@ -3,9 +3,8 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const styles = {
-  width: '100vw',
+  width: '50vw',
   height: '100%',
-//   position: 'absolute',
 };
 
 const MapboxGLMap = () => {
@@ -17,9 +16,9 @@ const MapboxGLMap = () => {
     const initializeMap = ({setMap, mapContainer}) => {
       const map = new mapboxgl.Map({
         container: mapContainer.current,
-        style: 'mapbox://styles/daniellehoo/ckcz3zm3t07dr1io2jdiiloq6', // stylesheet location
-        center: [0, 0],
-        zoom: 5,
+        style: 'mapbox://styles/daniellehoo/ckdaoqibh1ds31il29rzxo07l', // stylesheet location
+        center: [-73.983787, 40.710104],
+        zoom: 8,
       });
 
       map.on('load', () => {

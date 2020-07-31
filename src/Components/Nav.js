@@ -11,7 +11,7 @@ class Nav extends Component {
       <nav className="nav" id="navbar">
         <div className="nav-content">
           <ul className="nav-items">
-            <li className="nav-item">
+            <li className="nav-item swing">
               <Link
                 activeClass="active"
                 to="section1"
@@ -23,7 +23,7 @@ class Nav extends Component {
                 Project 1
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item swing">
               <Link
                 activeClass="active"
                 to="section2"
@@ -35,7 +35,7 @@ class Nav extends Component {
                 Project 2
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item swing">
               <Link
                 activeClass="active"
                 to="section3"
@@ -47,7 +47,7 @@ class Nav extends Component {
                 Project 3
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item swing">
               <Link
                 activeClass="active"
                 to="section4"
@@ -59,7 +59,7 @@ class Nav extends Component {
                 Project 4
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item swing">
               <Link
                 activeClass="active"
                 to="footer"
