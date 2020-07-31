@@ -1,17 +1,19 @@
-import React from 'react'
-import { Counter } from './features/counter/Counter'
-import './App.css'
-import Nav from './Components/Nav'
-import Section from './Components/Section'
-import dummyText from './DummyText'
-import backgroundImage1 from './images/1.jpeg'
-import backgroundImage2 from './images/2.jpeg'
-import tetra from './images/tetra-animation-basic.gif'
-import Footer from './Components/footer'
+import React from 'react';
+import {Counter} from './features/counter/Counter';
+import './App.css';
+import Nav from './Components/Nav';
+import Section from './Components/Section';
+import dummyText from './DummyText';
+import backgroundImage1 from './images/1.jpeg';
+import backgroundImage2 from './images/2.jpeg';
+import tetra from './images/tetra-animation-basic.gif';
+import Footer from './Components/footer';
+import MapboxGLMap from './Components/Mapbox';
 
-function App () {
+function App() {
   return (
-    <div className="App">
+    <div className="container">
+      <h1>blo.cks</h1>
       <Nav />
       <Section
         title=""
@@ -19,7 +21,7 @@ function App () {
         dark={true}
         id="section1"
         backImg={backgroundImage2}
-        height="100vh"
+        height="90vh"
       />
       <Section
         title=""
@@ -43,15 +45,12 @@ function App () {
         backImg={backgroundImage1}
         height="50vh"
       />
-      <Section
-        title="Section 5"
-        subtitle={dummyText}
-        dark={true}
-        id="section5"
-      />
-      <Footer id="footer" />
+      <div class="map">
+        <MapboxGLMap />
+      </div>
+      <Footer />
     </div>
   );
 }
 
-export default App
+export default App;

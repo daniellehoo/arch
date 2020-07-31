@@ -20,7 +20,7 @@ class Nav extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 1
+                Project 1
               </Link>
             </li>
             <li className="nav-item">
@@ -32,7 +32,7 @@ class Nav extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 2
+                Project 2
               </Link>
             </li>
             <li className="nav-item">
@@ -44,7 +44,7 @@ class Nav extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 3
+                Project 3
               </Link>
             </li>
             <li className="nav-item">
@@ -56,19 +56,7 @@ class Nav extends Component {
                 offset={-70}
                 duration={500}
               >
-                Section 4
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                activeClass="active"
-                to="section5"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 5
+                Project 4
               </Link>
             </li>
             <li className="nav-item">
