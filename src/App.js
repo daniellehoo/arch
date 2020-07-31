@@ -18,7 +18,7 @@ function App () {
         subtitle=""
         dark={true}
         id="section1"
-        backImg={backgroundImage1}
+        backImg={backgroundImage2}
         height="100vh"
       />
       <Section
@@ -36,11 +36,12 @@ function App () {
         id="section3"
       />
       <Section
-        title="Section 4"
-        subtitle={dummyText}
+        title=""
+        subtitle=""
         dark={false}
         id="section4"
-        backImg={backgroundImage2}
+        backImg={backgroundImage1}
+        height="50vh"
       />
       <Section
         title="Section 5"
@@ -48,8 +49,7 @@ function App () {
         dark={true}
         id="section5"
       />
-      <Footer
-      id="footer" />
+      <Footer id="footer" />
     </div>
   );
 }

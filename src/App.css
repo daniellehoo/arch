@@ -33,10 +33,15 @@ img {
     border: none;
 }
 
-#section1, #section2 {
+#section1, #section2, #section4 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+
+#section2 {
+    padding: 1rem;
 }
 
 #section3 {
