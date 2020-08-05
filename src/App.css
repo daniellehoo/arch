@@ -1,178 +1,195 @@
 @font-face {
-	font-family: 'xiImperfect';
-	src: url('//2ttf.com/webfont/KLYZ1IyB/webfont.ttf') format('truetype');
+  font-family: 'xiImperfect';
+  src: url('//2ttf.com/webfont/KLYZ1IyB/webfont.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'fontname';
-	src: url('//2ttf.com/webfont/Y4mTLBOG/webfont.ttf') format('truetype');
+  font-family: 'fontname';
+  src: url('//2ttf.com/webfont/Y4mTLBOG/webfont.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Maragsâ-Display';
-    src: local('Maragsâ-Display'), url(./fonts/Maragsâ-Display.otf) format('opentype');
+  font-family: 'Maragsâ-Display';
+  src: local('Maragsâ-Display'),
+    url(./fonts/Maragsâ-Display.otf) format('opentype');
 }
 
-body, * {
-    margin: 0;
-    box-sizing: border-box;
+body,
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 h1 {
-    font-family: 'Maragsâ-Display';
-    position: fixed;
-    margin: 2rem;
-    font-size: 5rem;
-    cursor: pointer;
+  font-family: 'Maragsâ-Display';
+  position: fixed;
+  margin: 2rem;
+  font-size: 5rem;
+  cursor: pointer;
+  padding: 2rem 0;
+  width: 100%;
 }
 
 /* --------- navgation --------- */
 .nav-content {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    font-family: 'fontname';
-    font-weight: 800;
-
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-family: 'fontname';
+  font-weight: 800;
 }
 
 .nav-items {
-    display: flex;
-    list-style: none;
-    cursor: pointer;
+  display: flex;
+  list-style: none;
+  cursor: pointer;
 }
 
 .nav-item {
-    margin: 1.25rem;
+  margin: 1.25rem;
 }
 
 img {
-    height: 50px;
+  height: 50px;
 }
 
 /* --------- sections --------- */
 .section {
-    margin: 0;
-    border: none;
+  margin: 0;
+  border: none;
 }
 
-#section1, #section2, #section4 {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+#section1,
+#section2,
+#section4 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-#section3 p {
-    font-size: 5rem;
-    margin: 0;
+#section3 p,
+#section4 {
+  font-size: 5rem;
+  margin: 0;
 }
 
-.map {
-    height: 50vh; 
+.grid {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  /* box-sizing: border-box; */
 }
 
-.mapboxgl-map {
-    position: relative;
-    height: 100%;
+.grid-item:first-child {
+    /* margin-left: 1rem; */
+}
+
+.grid-item {
+    display: flex;
+  justify-content: center;
+  width: 33%;
+  margin: 1rem;
+}
+
+.grid img {
+  width: 100%;
+  height: 90%;
+}
+
+.hidden {
+  display: none;
 }
 
 /* --------- footer --------- */
 
 .footer {
-    display: flex;
-    height: 200px;
-    background-color: bisque;
-    border-top: 1px solid black;
+  display: flex;
+  height: 200px;
+  background-color: bisque;
+  border-top: 1px solid black;
 }
 
 .footer ul {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
 }
 
 .footer li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
+.map {
+  height: 50vh;
+}
+
+.mapboxgl-map {
+  position: relative;
+  height: 100%;
+}
 
 /* --------- keyframes --------- */
 
-@-webkit-keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-       transform: translateX(-5px);
-    } 
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
-@keyframes swing
-{
-    15%
-    {
-        -webkit-transform: translateX(5px);
-        transform: translateX(5px);
-    }
-    30%
-    {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-    50%
-    {
-        -webkit-transform: translateX(3px);
-        transform: translateX(3px);
-    }
-    65%
-    {
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
-    }
-    80%
-    {
-        -webkit-transform: translateX(2px);
-        transform: translateX(2px);
-    }
-    100%
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  30% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  50% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  65% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  80% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
-.swing:hover
-{
-        -webkit-animation: swing 1s ease;
-        animation: swing 1s ease;
-        -webkit-animation-iteration-count: 1;
-        animation-iteration-count: 1;
+.swing:hover {
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }

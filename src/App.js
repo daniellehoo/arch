@@ -8,12 +8,14 @@ import backgroundImage1 from './images/1.jpeg';
 import backgroundImage2 from './images/2.jpeg';
 import tetra from './images/tetra-animation-basic.gif';
 import Footer from './Components/footer';
+import gridImages from './images/2.jpeg';
 
 function App() {
+  const grid = [backgroundImage1, backgroundImage2, gridImages];
   return (
     <div className="container">
-      <h1 className="swing">BLO.CKS</h1>
       <Nav />
+      <h1 className="swing">we are BLO.CKs</h1>
       <Section
         title=""
         subtitle=""
@@ -21,7 +23,7 @@ function App() {
         id="section1"
         backImg={backgroundImage2}
         height="90vh"
-      />
+      ></Section>
       <Section
         title=""
         subtitle=""
@@ -32,11 +34,20 @@ function App() {
       />
       <Section
         title=""
+        subtitle="grid"
+        dark={true}
+        grid={grid}
+        id="section3"
+        height="50vh"
+      />
+      <Section
+        title=""
         subtitle="This is the future."
         dark={true}
-        id="section3"
+        id="section4"
+        height="50vh"
       />
-      <Section title="" subtitle="" dark={false} id="section4" height="50vh" />
+      <Section title="" subtitle="" dark={false} id="section5" height="50vh" />
       <Footer />
     </div>
   );
