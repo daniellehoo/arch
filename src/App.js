@@ -6,12 +6,13 @@ import Section from './Components/Section';
 import dummyText from './DummyText';
 import backgroundImage1 from './images/1.jpeg';
 import backgroundImage2 from './images/2.jpeg';
+import backgroundImage3 from './images/3.jpeg';
+import backgroundImage4 from './images/4.jpeg';
 import tetra from './images/tetra-animation-basic.gif';
 import Footer from './Components/footer';
-import gridImages from './images/2.jpeg';
 
 function App() {
-  const grid = [backgroundImage1, backgroundImage2, gridImages];
+  const grid = [backgroundImage1, backgroundImage2, backgroundImage4];
   return (
     <div className="container">
       <Nav />
@@ -21,7 +22,7 @@ function App() {
         subtitle=""
         dark={true}
         id="section1"
-        backImg={backgroundImage2}
+        backImg={backgroundImage3}
         height="90vh"
       ></Section>
       <Section

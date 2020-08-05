@@ -22,11 +22,10 @@ body,
 
 h1 {
   font-family: 'Maragsâ-Display';
-  /* position: fixed; */
   margin: 0 1.25rem;
   font-size: 5rem;
   cursor: pointer;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   width: 100%;
 }
 
@@ -38,6 +37,13 @@ h1 {
   right: 0;
   font-family: 'fontname';
   font-weight: 800;
+    padding: 2rem 0;
+
+}
+
+.nav-content:first-child {
+  /* position: fixed; */
+  left: 0;
 }
 
 .nav-items {
@@ -47,7 +53,7 @@ h1 {
 }
 
 .nav-item {
-  margin: 1.25rem;
+  margin: 0 1.25rem;
 }
 
 img {
@@ -69,7 +75,7 @@ img {
 }
 
 #section2 {
-    margin: 5rem;
+  margin: 5rem;
 }
 
 #section3 p,
@@ -86,11 +92,11 @@ img {
 }
 
 .grid-item:first-child {
-    /* margin-left: 1rem; */
+  /* margin-left: 1rem; */
 }
 
 .grid-item {
-    display: flex;
+  display: flex;
   justify-content: center;
   width: 33%;
   margin: 1rem;
