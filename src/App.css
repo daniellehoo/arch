@@ -22,8 +22,8 @@ body,
 
 h1 {
   font-family: 'Maragsâ-Display';
-  position: fixed;
-  margin: 2rem;
+  /* position: fixed; */
+  margin: 0 1.25rem;
   font-size: 5rem;
   cursor: pointer;
   padding: 2rem 0;
@@ -66,6 +66,10 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+#section2 {
+    margin: 5rem;
 }
 
 #section3 p,

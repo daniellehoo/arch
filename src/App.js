@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="container">
       <Nav />
-      <h1 className="swing">we are BLO.CKs</h1>
+      {/* <h1 className="swing">we are BLO.CKs</h1> */}
       <Section
         title=""
         subtitle=""
@@ -34,7 +34,7 @@ function App() {
       />
       <Section
         title=""
-        subtitle="grid"
+        subtitle=""
         dark={true}
         grid={grid}
         id="section3"

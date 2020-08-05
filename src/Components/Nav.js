@@ -10,6 +10,9 @@ class Nav extends Component {
     return (
       <nav className="nav" id="navbar">
         <div className="nav-content">
+          <h1 className="swing"
+          onClick={scroll.scrollToTop}
+          >we are BLO.CKs</h1>
           <ul className="nav-items">
             <li className="nav-item swing">
               <Link
