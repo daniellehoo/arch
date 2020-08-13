@@ -1,48 +1,80 @@
 import React from 'react';
 import {TweenMax, Power1, TimelineLite} from 'gsap';
+import {useTween} from 'react-use';
 
-let clientX = -300,
-  clientY = -300,
-  // elements
-  outerCursor = document.querySelector('.cursor--outer'),
-  innerCursor = document.querySelector('.cursor--inner'),
-  link = document.querySelector('.link');
+class Mouse extends React.Component {
+  // we keep track of x and y coordinates for the blue circle - the main one
+  // and the trailing circle - the white one
+  // for simplicity, they are initialzed to (0, 0), the top left corner of the viewport
+  state = {
+    xMain: 0,
+    yMain: 0,
+    xTrailing: 0,
+    yTrailing: 0,
+  }
+  
+  handleMouseMove = (e) => {
+    // Using pageX and pageY will cause glitching when you scroll the window down
+    // because it measures the distance from the top left rendered corner, not
+    // top left visible corner
+    const { clientX, clientY } = e;
 
-let initCursor = function () {
-  // add listener to track the current mouse position
-  document.addEventListener('mousemove', function (e) {
-    clientX = e.clientX;
-    clientY = e.clientY;
-  });
+    // we set the main circle coordinates as soon as the mouse is moved
+    this.setState({
+      xMain: clientX,
+      yMain: clientY,
+    }, () => {
+      // this callback is invoked after the first setState finishes
+      // 
+      // here we schedule saving the trailing coordinates in state 100ms  
+      // after the main coordinates have been set to simulate the trailing
+      setTimeout(() => {
+        this.setState({
+          xTrailing: clientX,
+          yTrailing: clientY,
+        })
+      }, 100);
+    })
+  }
 
-  var render = function () {
-    TweenMax.set(outerCursor, {
-      x: clientX,
-      y: clientY,
-      delay: 0.08,
-      ease: Power1.easeOut,
-    });
+  render = () => {
+    // we retrieve coordinates from state
+    const {
+      xMain,
+      yMain,
+      xTrailing,
+      yTrailing
+    } = this.state;
 
-    TweenMax.set(innerCursor, {
-      x: clientX,
-      y: clientY,
-    });
-
-    requestAnimationFrame(render);
-  };
-
-  requestAnimationFrame(render);
-};
-
-initCursor();
-
-function mouse() {
-  return (
-    <>
-      <div className="cursor cursor--outer"></div>
-      <div className="cursor cursor--inner"></div>
-    </>
-  );
+    return (
+      // we need a container that has a definite height, 800px in my example
+      // this is to make sure it leaves enough room for mouse movement to happen and trigger the event handler
+      // 
+      // also, you don't need the event listener on both your cursor elements, only on the container
+      <div
+        className='mouse-container'
+        onMouseMove={e => this.handleMouseMove(e)}
+      >
+        <div className='cursors'>
+          <div 
+            className='cursor'
+            style={{ 
+              left: xMain, 
+              top: yMain,
+            }}
+          />
+                    <div 
+            className='cursor'
+            style={{ 
+              left: xTrailing, 
+              top: yTrailing,
+            }}
+          />
+        </div>
+      </div>
+      )
+  }
 }
 
-export default mouse;
+
+export default Mouse;
