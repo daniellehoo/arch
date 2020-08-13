@@ -18,6 +18,7 @@ body,
 * {
   margin: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 h1 {
@@ -27,6 +28,34 @@ h1 {
   cursor: pointer;
   /* padding: 2rem 0; */
   width: 100%;
+}
+
+/* Outer Cursor Circle */
+.cursor--outer {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #232323;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+/* Inner Cursor Circle */
+.cursor--inner {
+  width: 4px;
+  height: 4px;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+  z-index: 11000;
+  background:#232323;
 }
 
 /* --------- navgation --------- */
@@ -61,7 +90,7 @@ img {
 }
 
 .nav-content {
-  color: brown;
+  color: magenta;
   mix-blend-mode: difference;
 }
 
@@ -122,7 +151,7 @@ img {
   display: flex;
   height: 200px;
   /* background-color: bisque; */
-  background-color: #61c7cd;
+  background-color: green;
   border-top: 1px solid black;
 }
 

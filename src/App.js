@@ -1,5 +1,6 @@
 import React from 'react';
 import {Counter} from './features/counter/Counter';
+import {TweenMax, Power1, TimelineLite} from 'gsap';
 import './App.css';
 import Nav from './Components/Nav';
 import Section from './Components/Section';
@@ -8,13 +9,17 @@ import backgroundImage1 from './images/1.jpeg';
 import backgroundImage2 from './images/2.jpeg';
 import backgroundImage3 from './images/3.jpeg';
 import backgroundImage4 from './images/4.jpeg';
+import Mouse from './Components/mouse';
 import tetra from './images/tetra-animation-basic.gif';
 import Footer from './Components/footer';
 
 function App() {
   const grid = [backgroundImage1, backgroundImage2, backgroundImage4];
+  // set the starting position of the cursor outside of the screen
+
   return (
     <div className="container">
+      <Mouse />
       <Nav />
       {/* <h1 className="swing">we are BLO.CKs</h1> */}
       <Section
