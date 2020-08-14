@@ -5,3 +5,10 @@ Smooth Scrolling: https://www.digitalocean.com/community/tutorials/how-to-implem
 
 Mapbox with React Hooks:
 https://sparkgeo.com/blog/build-a-react-mapboxgl-component-with-hooks/
+
+Mix-blend-mode:
+https://css-tricks.com/almanac/properties/m/mix-blend-mode/
+
+Cursor with blend mode:
+https://codepen.io/clementGir/pen/RQqvQx
+https://stackoverflow.com/questions/58923793/custom-cursor-grow-on-hover
