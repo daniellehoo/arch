@@ -7,7 +7,7 @@ function Section({title, subtitle, dark, id, backImg, grid, height}) {
     backgroundImage: `url(${backImg})`,
     height: height,
   };
-  console.log(grid)
+  // console.log(grid)
 
   return (
     <div
