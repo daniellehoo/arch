@@ -18,15 +18,13 @@ body,
 * {
   margin: 0;
   box-sizing: border-box;
-  /* cursor: none; */
+  cursor: none;
 }
 
 h1 {
   font-family: 'Maragsâ-Display';
   margin: 0 1.25rem;
   font-size: 5rem;
-  /* cursor: pointer; */
-  /* padding: 2rem 0; */
   width: 100%;
 }
 

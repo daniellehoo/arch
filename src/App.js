@@ -1,6 +1,4 @@
 import React, {useState, useRef} from 'react';
-// import {TweenMax, Power1, TimelineLite} from 'gsap';
-import {useTween} from 'react-use';
 import './App.css';
 import Nav from './Components/Nav';
 import Section from './Components/Section';
@@ -18,7 +16,6 @@ function App() {
   const [yMain, setyMain] = useState(0);
   const [xTrailing, setxTrailing] = useState(0);
   const [yTrailing, setyTrailing] = useState(0);
-  // const cursors = document.getElementsByClassName('cursor');
   const cursorsRef = useRef(null);
   const smolCursorRef = useRef(null);
 
@@ -35,18 +32,6 @@ function App() {
       setyTrailing(clientY);
     }, 100);
   }
-
-  // function growOnHover() {
-  //   console.log(hoverables)
-  //   hoverables[0].addEventListener('mouseenter', function () {
-  //     TweenMax.to(cursors, 1, {scale: 3});
-  //   });
-  //  hoverables[0].addEventListener('mouseleave', function () {
-  //     TweenMax.to(cursors, 1, {scale: 1});
-  //   });
-  // }
-
-  // growOnHover();
 
   return (
     <div className="container" onMouseMove={handleMouseMove}>
@@ -102,8 +87,7 @@ function App() {
         height="50vh"
       />
       <Section title="" subtitle="" dark={false} id="section5" height="50vh" />
-      <Footer 
-      ref={{ref1: cursorsRef, ref2: smolCursorRef}} />
+      <Footer ref={{ref1: cursorsRef, ref2: smolCursorRef}} />
     </div>
   );
 }
