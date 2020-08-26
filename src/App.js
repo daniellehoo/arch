@@ -1,18 +1,15 @@
-import React, {useState} from 'react';
-import {Counter} from './features/counter/Counter';
-import {TweenMax, Power1, TimelineLite} from 'gsap';
+import React, {useState, useRef} from 'react';
+// import {TweenMax, Power1, TimelineLite} from 'gsap';
 import {useTween} from 'react-use';
 import './App.css';
 import Nav from './Components/Nav';
 import Section from './Components/Section';
-import dummyText from './DummyText';
 import backgroundImage1 from './images/1.jpeg';
 import backgroundImage2 from './images/2.jpeg';
 import backgroundImage3 from './images/3.jpeg';
 import backgroundImage4 from './images/4.jpeg';
-import Mouse from './Components/mouse';
 import tetra from './images/tetra-animation-basic.gif';
-import Footer from './Components/footer';
+import Footer from './Components/Footer';
 
 function App() {
   const grid = [backgroundImage1, backgroundImage2, backgroundImage4];
@@ -21,9 +18,11 @@ function App() {
   const [yMain, setyMain] = useState(0);
   const [xTrailing, setxTrailing] = useState(0);
   const [yTrailing, setyTrailing] = useState(0);
+  // const cursors = document.getElementsByClassName('cursor');
+  const cursorsRef = useRef(null);
+  const smolCursorRef = useRef(null);
 
- function handleMouseMove(e) {
-  //  console.log(e)
+  function handleMouseMove(e) {
     // Using pageX and pageY will cause glitching when you scroll the window down
     // because it measures the distance from the top left rendered corner, not
     // top left visible corner
@@ -32,24 +31,37 @@ function App() {
     setyMain(clientY);
 
     setTimeout(() => {
-      setxTrailing(clientX)
-      setyTrailing(clientY)
-      });
-    // }, 100);
-  };
+      setxTrailing(clientX);
+      setyTrailing(clientY);
+    }, 100);
+  }
+
+  // function growOnHover() {
+  //   console.log(hoverables)
+  //   hoverables[0].addEventListener('mouseenter', function () {
+  //     TweenMax.to(cursors, 1, {scale: 3});
+  //   });
+  //  hoverables[0].addEventListener('mouseleave', function () {
+  //     TweenMax.to(cursors, 1, {scale: 1});
+  //   });
+  // }
+
+  // growOnHover();
 
   return (
     <div className="container" onMouseMove={handleMouseMove}>
-      {/* <Mouse /> */}
       <div className="cursors">
         <div
-          className="cursor"
+          ref={cursorsRef}
+          className="outerCursor"
+          id="outer"
           style={{
             left: xMain,
             top: yMain,
           }}
         />
         <div
+          ref={smolCursorRef}
           className="cursor"
           style={{
             left: xTrailing,
@@ -58,7 +70,6 @@ function App() {
         />
       </div>
       <Nav />
-      {/* <h1 className="swing">we are BLO.CKs</h1> */}
       <Section
         title=""
         subtitle=""
@@ -91,7 +102,8 @@ function App() {
         height="50vh"
       />
       <Section title="" subtitle="" dark={false} id="section5" height="50vh" />
-      <Footer />
+      <Footer 
+      ref={{ref1: cursorsRef, ref2: smolCursorRef}} />
     </div>
   );
 }
