@@ -26,3 +26,9 @@ https://upmostly.com/tutorials/react-onhover-event-handling-with-examples
 
 useEffect event listener:
 https://dev.to/adrianbdesigns/custom-react-hooks-useeventlistener-1kp
+
+useRefs react hook:
+https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29
+
+use hoooks: useEventListener
+https://usehooks.com/useEventListener/
