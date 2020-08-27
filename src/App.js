@@ -54,7 +54,7 @@ function App() {
           }}
         />
       </div>
-      <Nav />
+      <Nav ref={{ref1: cursorsRef, ref2: smolCursorRef}} />
       <Section
         title=""
         subtitle=""

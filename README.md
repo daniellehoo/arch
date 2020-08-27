@@ -20,3 +20,9 @@ https://www.youtube.com/watch?v=ScT4ElKd6eo
 
 Forwarding multiple refs:
 https://stackoverflow.com/questions/53561913/react-forwarding-multiple-refs
+
+OnHover event handler:
+https://upmostly.com/tutorials/react-onhover-event-handling-with-examples
+
+useEffect event listener:
+https://dev.to/adrianbdesigns/custom-react-hooks-useeventlistener-1kp
